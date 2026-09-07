@@ -56,6 +56,24 @@
 - 문체를 다듬을 뿐 구현이나 사실 관계를 검증하지는 않습니다.
 - 규범에서 허용하는 여러 표현 중 하나를 선호할 뿐, 다른 표현을 틀렸다고 단정하지 않습니다.
 
+## 설치
+
+Claude Code의 스킬 디렉터리에 내려받으면 됩니다. 혼자 모든 프로젝트에서 쓸 때는 개인 디렉터리에 둡니다.
+
+```bash
+git clone https://github.com/ddoriddori/please-humanize.git ~/.claude/skills/please-humanize
+```
+
+한 프로젝트에서 팀과 함께 쓸 때는 프로젝트 안에 두고 커밋합니다.
+
+```bash
+git clone https://github.com/ddoriddori/please-humanize.git .claude/skills/please-humanize
+```
+
+`SKILL.md`와 `references/` 디렉터리가 `please-humanize` 디렉터리 안에 그대로 있어야 스킬을 찾습니다. Claude Code를 다시 시작한 뒤 아래 사용 예시처럼 스킬 이름을 부르면 적용됩니다. 나중에 최신 내용을 받을 때는 내려받은 디렉터리에서 `git pull`을 실행하세요.
+
+붙여 넣는 원문은 그대로 모델에 전달되고, 스킬은 코드 식별자와 버전 표기를 보존합니다. 로그나 설정에 섞인 토큰, 키, 고객 식별 정보는 붙여 넣기 전에 지우세요.
+
 ## 어떻게 쓰나요
 
 스킬 이름과 다듬을 원문을 함께 보내면 됩니다. 여기에 지켜야 할 것을 한 줄 적으면 결과가 더 안정적입니다. 원문의 사실과 조건은 스킬이 보존하지만, 구조를 어디까지 바꿀지와 분량을 얼마나 줄일지는 글마다 판단이 갈립니다.
